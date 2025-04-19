@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.min.css" rel="stylesheet">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/mycss.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        .intro-section h2,
+        .intro-section p
+        {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+                <!-- Loader + Overlay noir -->
+                <div id="global-loader" style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #ffffff;
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ">
+                <div class="container">
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                </div>
+                </div>
+
+<section id="home" class="container-fluid intro-section">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar mx-auto px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">YourLogo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#acceuil">Accueil</a>
+                    <a class="nav-link" href="#coupon">Coupon</a>
+                    <a class="nav-link" href="#authentification">Authentifier</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Authentification -->
+    <main id="acceuil" class="container my-6 px-3 px-md-5" style="max-width: 1140px; margin-top: 8rem !important;">
+        <div class="row align-items-center">
+            <!-- Texte -->
+            <div class="col-lg-6 col-md-12">
+                <h2 class="fw-bold text-start mt-3 display-6 display-md-5">Bienvenue sur notre site d'Authentification</h2>
+                <p class="fs-5 fst-italic text-start mt-4">
+                    Authentifiez vos tickets en toute sécurité et rapidité. Notre plateforme vous permet de vérifier l'authenticité de vos billets en quelques clics. Peu importe le type de ticket, nous sommes là pour vous aider à garantir leur validité.
+                </p>
+                <div class="mt-4 text-start">
+                    <a href="#authentification" class="btn btn-outline-dark px-4 py-2">
+                        <i class="bi bi-ticket-perforated-fill"></i> Vérifier l'authenticité de votre ticket
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image SVG -->
+            <div class="col-lg-6 col-md-12 text-center mt-5 mt-lg-0">
+                <img src="images/confirmation.svg"
+                     class="img-fluid"
+                     style="max-height: 300px; max-width: 100%;"
+                     alt="Illustration d'authentification">
+            </div>
+        </div>
+    </main>
+</section>
+
+
+<!-- Card Section -->
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Pourquoi vérifier votre coupon sur notre site ?</h1>
+        <div class="heading-line mb-5"></div>
+        <p class="text-muted">Nous offrons une solution rapide, sécurisée et efficace pour vérifier l'authenticité de vos tickets et vos coupons.</p>
+    </div>
+
+    <!-- Grid -->
+<div class="container my-5">
+    <!-- Grid -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Card -->
+      <div class="col">
+        <a class="card h-100 text-decoration-none shadow-sm hover-shadow" href="#">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-patch-check-fill fs-2 text-success"></i>
+              <div>
+                <h3 class="card-title text-dark mb-1">Vérification sécurisé</h3>
+                <p class="card-text text-muted small">L'intégralité de votre code est protégé et même nous n'y avons pas accès</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card -->
+      <div class="col">
+        <a class="card h-100 text-decoration-none shadow-sm hover-shadow" href="#">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-database fs-2 text-primary"></i>
+              <div>
+                <h3 class="card-title h5 text-dark mb-1">Traitement efficace</h3>
+                <p class="card-text text-muted small">Nous analysons de manière confidentiel les données de votre ticket</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card -->
+      <div class="col">
+        <a class="card h-100 text-decoration-none shadow-sm hover-shadow" href="#">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-mailbox-flag fs-2 text-danger"></i>
+              <div>
+                <h3 class="card-title h5 text-dark mb-1">Services rapide</h3>
+                <p class="card-text text-muted small">Le résultat sur l'authenticité de votre ticket vous ai envoyé sur votre e-mail dans les plus bref délais après Vérification</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+</div>
+<div id="coupon" class="container my-5">
+    <div class="text-center mt-4">
+        <h2 class="fw-bold">Les types de coupons que nous <br> vérifions pour vous </h2>
+    </div>
+
+    <section id="coupon" class="coupon py-4">
+        <div class="container">
+            <div class="row g-3"> <!-- Ajout de gutter (espacement) -->
+                <div class="col-6 col-md-3">
+                    <div class="logo-box shadow-sm h-100">
+                        <img src="images/neosurf.png" alt="Neosurf" class="img-fluid w-100 h-100" style="object-fit: contain; object-position: center;">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="logo-box shadow-sm h-100">
+                        <img src="images/PCS.jpeg" alt="PCS" class="img-fluid w-100 h-100" style="object-fit: contain; object-position: center;">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="logo-box shadow-sm h-100">
+                        <img src="images/paysafe.png" alt="Paysafe" class="img-fluid w-100 h-100" style="object-fit: contain; object-position: center;">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="logo-box shadow-sm h-100">
+                        <img src="images/transcash.png" alt="Transcash" class="img-fluid w-100 h-100" style="object-fit: contain; object-position: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats py-5 bg-light">
+
+        <div class="text-center mt-4 mb-4">
+            <h2 class="fw-bold">Notre fiabilité en chiffres </h2>
+        </div>
+        <div class="container" data-aos="fade-up">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+              <div class="stats-item p-4 text-center shadow-sm rounded-3 h-100">
+                <div class="counter display-4 fw-bold text-primary mb-2"
+                     data-purecounter-start="0"
+                     data-purecounter-end="50"
+                     data-purecounter-duration="1">0</div>
+                <p class="text-uppercase mb-0">Authentification par jour</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="stats-item p-4 text-center shadow-sm rounded-3 h-100">
+                <div class="counter display-4 fw-bold text-primary mb-2"
+                     data-purecounter-start="0"
+                     data-purecounter-end="1546"
+                     data-purecounter-duration="1">0</div>
+                <p class="text-uppercase mb-0">Coupon vérifier</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="stats-item p-4 text-center shadow-sm rounded-3 h-100">
+                <div class="counter display-4 fw-bold text-primary mb-2"
+                     data-purecounter-start="0"
+                     data-purecounter-end="1325"
+                     data-purecounter-duration="1">0</div>
+                <p class="text-uppercase mb-0">Clients statifaits</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="stats-item p-4 text-center shadow-sm rounded-3 h-100">
+                <div class="counter display-4 fw-bold text-primary mb-2"
+                data-purecounter-start="0"
+                data-purecounter-end="100"
+                data-purecounter-suffix="%">0</div>
+
+                <p class="text-uppercase mb-0">Taux de fiabilité</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="authentification" class="get-started py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <h2 class="display-3 font-weight-bold text-capitalize">Authentifier votre<br>coupon ici</h2>
+                <div class="heading-line mx-auto bg-primary" style="height: 3px; width: 100px;"></div>
+            </div>
+            <div class="row no-gutters shadow">
+                <!-- Left Column -->
+                <div class="col-12 col-lg-6 bg-primary text-white p-4">
+                    <div class="cta-info">
+                        <h5 class="display-4 font-weight-bold mb-4">Vérification sécurisée à 100%</h5>
+                        <p class="lead mt-3">
+                            Nous utilisons des technologies avancées pour garantir la sécurité de vos données. Notre plateforme est conçue pour protéger vos informations personnelles et assurer la confidentialité de vos transactions.
+                            Nous vous garantissons la sécurité de vos données. Nous ne stockons pas vos informations personnelles et nous ne partageons pas vos données avec des tiers. Votre confidentialité est notre priorité.
+                        </p>
+                        <h3 class="h2 mb-3">Comment nous procédons ?</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check2"></i> Nous recevons les coordonnées</li>
+                            <li class="mb-2"><i class="bi bi-check2"></i> Nous les vérifions</li>
+                            <li><i class="bi bi-check2"></i> Nous vous ferons un retour dans les brefs délais</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-12 col-lg-6 bg-white p-4">
+                    <div class="form">
+                        <h4 class="h2 mb-4 text-center">Saisissez ici</h4>
+
+                        <!-- Conteneur pour l'animation Rive bien centré -->
+                        <div class="text-center mb-0">
+                            <canvas id="rive-canvas" width="200" height="200" style="display: block; margin: 0 auto; max-width: 100%; height: auto;"></canvas>
+                        </div>
+
+                        <form action="#" class="row" id="rechargeForm">
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <input type="text" placeholder="Nom" id="inputNom" class="form-control form-control-lg shadow-sm" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <input type="text" placeholder="Prénom" id="inputPrenom" class="form-control form-control-lg shadow-sm" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <input type="email" placeholder="Email" id="inputEmail" class="form-control form-control-lg shadow-sm" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <input type="tel" placeholder="Numéro de téléphone" id="inputNumero" class="form-control form-control-lg shadow-sm" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <select class="form-control form-control-lg shadow-sm" id="inputRecharge" required>
+                                    <option value="" selected disabled>Type de recharge</option>
+                                    <option value="mobile">Recharge mobile</option>
+                                    <option value="internet">Forfait internet</option>
+                                    <option value="credit">Crédit téléphonique</option>
+                                    <option value="other">Autre type</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <select class="form-control form-control-lg shadow-sm" id="inputValeur" required>
+                                    <option value="" selected disabled>Valeur de la recharge</option>
+                                    <option value="5">5 €</option>
+                                    <option value="10">10 €</option>
+                                    <option value="15">15 €</option>
+                                    <option value="20">20 €</option>
+                                    <option value="25">25 €</option>
+                                    <option value="30">30 €</option>
+                                    <option value="50">50 €</option>
+                                    <option value="100">100 €</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="input-group">
+                                    <input type="password" placeholder="Entrez le code de recharge" id="inputCode" class="form-control form-control-lg shadow-sm" required>
+                                    <span class="input-group-text bg-white" id="toggleCode" style="cursor: pointer;">
+                                        <i class="bi bi-eye-slash" id="eyeIcon"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="password" placeholder="Confirmez le code de recharge" id="inputConfirmCode" class="form-control form-control-lg shadow-sm" required>
+                                <div class="invalid-feedback" id="codeError">Les codes ne correspondent pas</div>
+                            </div>
+                            <div class="col-12 text-center mt-2">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 py-3">
+                                    Envoyer <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="text-center p-3" style="background-color: #f8f9fa;">
+        © 2023 YourCompany. Tous droits réservés.
+    </div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialisation avec options
+      new PureCounter({
+        selector: '.counter',       // cible vos éléments avec class="counter"
+        duration: 2,               // durée en secondes
+        delay: 10,                 // délai en ms
+        once: true,                // ne joue qu'une fois
+        legacy: false              // mode moderne
+      });
+
+      // Animation d'apparition (optionnelle)
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.stats-item').forEach(item => {
+        observer.observe(item);
+      });
+    });
+  </script>
+<script>
+    // Toggle password visibility
+    document.getElementById('toggleCode').addEventListener('click', function() {
+        const codeInput = document.getElementById('inputCode');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        if (codeInput.type === 'password') {
+            codeInput.type = 'text';
+            eyeIcon.classList.remove('bi-eye-slash');
+            eyeIcon.classList.add('bi-eye');
+        } else {
+            codeInput.type = 'password';
+            eyeIcon.classList.remove('bi-eye');
+            eyeIcon.classList.add('bi-eye-slash');
+        }
+    });
+
+    // Check code matching
+    document.getElementById('rechargeForm').addEventListener('submit', function(e) {
+        const code = document.getElementById('inputCode').value;
+        const confirmCode = document.getElementById('inputConfirmCode').value;
+        const codeError = document.getElementById('codeError');
+
+        if (code !== confirmCode) {
+            e.preventDefault();
+            document.getElementById('inputConfirmCode').classList.add('is-invalid');
+            codeError.style.display = 'block';
+        }
+    });
+
+    // Reset error when typing
+    document.getElementById('inputConfirmCode').addEventListener('input', function() {
+        this.classList.remove('is-invalid');
+        document.getElementById('codeError').style.display = 'none';
+    });
+</script>
+<!-- Script Rive (version moderne) -->
+<script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+<script>
+  // Vérifie que le canvas et Rive sont chargés
+  document.addEventListener('DOMContentLoaded', () => {
+    new rive.Rive({
+      src: "assets/childface.riv",  // Chemin corrigé (notez les / au lieu de \)
+      canvas: document.getElementById('rive-canvas'),
+      autoplay: true,
+      stateMachines: "State Machine 1",  // Optionnel : si votre .riv utilise des State Machines
+      onLoad: () => {
+        console.log("Animation Rive chargée !");
+      },
+      onError: (err) => {
+        console.error("Erreur Rive:", err);
+      }
+
+    });
+  });
+</script>
+<script src="https://unpkg.com/@rive-app/canvas@2.10.0"></script>
+
+
+<script>
+    // Animation de chargement
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('global-loader');
+      if (loader) {
+        loader.style.transition = 'opacity 6s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 500);
+      }
+    });
+
+    // Fallback au cas où 'load' ne se déclenche pas
+    setTimeout(function() {
+      const loader = document.getElementById('global-loader');
+      if (loader) loader.remove();
+    }, 3000); // Force la suppression après 3 sec max
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTopBtn = document.getElementById('backToTopBtn');
+
+      // Afficher/masquer au scroll
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      });
+
+      // Scroll vers le haut
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+   <!-- From Uiverse.io by vinodjangid07 -->
+<button class="button" id="backToTopBtn" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+      ></path>
+    </svg>
+  </button>
+</body>
+</html>

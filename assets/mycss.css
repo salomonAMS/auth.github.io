@@ -1,0 +1,542 @@
+
+/* Preline UI
+@import "./node_modules/preline/variants.css";
+@import "tailwindcss";
+@import 'aos/dist/aos.css';
+/* Plugins
+/* @plugin "@tailwindcss/forms"; */
+
+body {
+    font-family: 'Poppins', 'Nunito', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+/* Navbar styles */
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+    .custom-navbar {
+        margin-top: 1.5rem;
+        max-width: 1140px;
+        border-radius: 0.75rem;
+        background: linear-gradient(135deg, #ffffff 0%, #277ef0 50%, #e1dfec 100%);
+        border: 1px solid #dee2e6;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .gradient-navbar .nav-link {
+        font-weight: 500;
+    }
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+/* Section intro avec dégradé */
+
+.intro-section a.nav-link {
+    color: #000; /* Pour contraste sur fond clair */
+}
+
+/* Bouton personnalisé */
+.btn-outline-dark {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-dark:hover {
+    background-color: white;
+    color: #0066cc;
+}
+
+
+.logo-box {
+    height: 120px; /* Hauteur fixe pour tous les conteneurs */
+    padding: 15px; /* Espace interne */
+    background: white; /* Fond blanc pour mieux voir */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stats Section - Version améliorée */
+/* Animation d'apparition */
+.stats-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .stats-item.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Style des compteurs */
+  .counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #106eea;
+    display: block;
+  }
+
+/* Cible uniquement le dernier élément .counter dans son conteneur */
+#stats .container .row > div:last-child .counter::after {
+    content: '%';
+    display: inline;
+  }
+
+
+  .get-started {
+    background-color: #f8f9fa;
+}
+
+.heading-line {
+    height: 3px;
+    width: 100px;
+    background-color: #007bff;
+    margin: 0 auto 1.5rem;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
+}
+
+/* Correction pour les display classes si nécessaire */
+.display-3 {
+    font-size: calc(1.525rem + 3.3vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+    .display-3 {
+        font-size: 4rem;
+    }
+    .display-4 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Pour le menu déroulant standard */
+select.form-control-lg {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+
+/* pour le champ de code de recharge*/
+#toggleCode {
+    cursor: pointer;
+    border-left: none;
+}
+.input-group-text {
+    border-radius: 0 .375rem .375rem 0 !important;
+}
+.is-invalid {
+    border-color: #dc3545;
+}
+
+
+@media (max-width: 992px) {
+    .get-started {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .h2 {
+        font-size: 1.75rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    #rive-canvas {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .form-control-lg, .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 2rem;
+    }
+
+    .p-4 {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    .display-4 {
+        font-size: 1.75rem;
+    }
+
+    .h2 {
+        font-size: 1.5rem;
+    }
+
+    #rive-canvas {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .shadow {
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-3 {
+        font-size: 1.75rem;
+    }
+
+    .p-4 {
+        padding: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+}
+
+
+/* Animation des bandes diagonales */
+@keyframes diagonalStripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Styles pour le conteneur principal */
+.container.my-6 {
+    background: linear-gradient(270deg, #007bff, #0056b3); /* Dégradé de droite à gauche */
+    /* Dégradé de droite à gauche */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 100, 0.5);
+    padding: 2rem;
+    color: white;
+}
+
+/* Effet de bandes diagonales animées */
+.container.my-6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.05) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 20px 20px;
+    animation: diagonalStripes 3s linear infinite;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+/* Effet de lumière subtile */
+.container.my-6::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(100, 150, 255, 0.2) 0%,
+        transparent 70%
+    );
+    z-index: 0;
+    animation: lightEffect 8s ease-in-out infinite alternate;
+}
+
+@keyframes lightEffect {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(20%, 20%);
+        opacity: 0.6;
+    }
+}
+
+/* Positionnement du contenu au-dessus des effets */
+.container.my-6 > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Styles pour le texte */
+.container.my-6 h2 {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container.my-6 p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Style du bouton */
+.container.my-6 .btn-outline-dark {
+    border-color: white;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.container.my-6 .btn-outline-dark:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container.my-6 {
+        margin-top: 4rem !important;
+    }
+}
+
+
+
+
+/* From Uiverse.io by Nawsome */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 160px;
+    height: 100px;
+    margin-left: -80px;
+    margin-top: -50px;
+    border-radius: 5px;
+    background: #1e3f57;
+    animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
+  }
+
+  .loader:nth-child(2) {
+    z-index: 11;
+    width: 150px;
+    height: 90px;
+    margin-top: -45px;
+    margin-left: -75px;
+    border-radius: 3px;
+    background: #3c517d;
+    animation-name: dot2_;
+  }
+
+  .loader:nth-child(3) {
+    z-index: 12;
+    width: 40px;
+    height: 20px;
+    margin-top: 50px;
+    margin-left: -20px;
+    border-radius: 0 0 5px 5px;
+    background: #6bb2cd;
+    animation-name: dot3_;
+  }
+
+  @keyframes dot1_ {
+    3%,97% {
+      width: 160px;
+      height: 100px;
+      margin-top: -50px;
+      margin-left: -80px;
+    }
+
+    30%,36% {
+      width: 80px;
+      height: 120px;
+      margin-top: -60px;
+      margin-left: -40px;
+    }
+
+    63%,69% {
+      width: 40px;
+      height: 80px;
+      margin-top: -40px;
+      margin-left: -20px;
+    }
+  }
+
+  @keyframes dot2_ {
+    3%,97% {
+      height: 90px;
+      width: 150px;
+      margin-left: -75px;
+      margin-top: -45px;
+    }
+
+    30%,36% {
+      width: 70px;
+      height: 96px;
+      margin-left: -35px;
+      margin-top: -48px;
+    }
+
+    63%,69% {
+      width: 32px;
+      height: 60px;
+      margin-left: -16px;
+      margin-top: -30px;
+    }
+  }
+
+  @keyframes dot3_ {
+    3%,97% {
+      height: 20px;
+      width: 40px;
+      margin-left: -20px;
+      margin-top: 50px;
+    }
+
+    30%,36% {
+      width: 8px;
+      height: 8px;
+      margin-left: -5px;
+      margin-top: 49px;
+      border-radius: 8px;
+    }
+
+    63%,69% {
+      width: 16px;
+      height: 4px;
+      margin-left: -8px;
+      margin-top: -37px;
+      border-radius: 10px;
+    }
+  }
+
+
+  /* From Uiverse.io by vinodjangid07 */
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+
+  .svgIcon path {
+    fill: white;
+  }
+
+  .button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+  }
+
+  .button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+
+  .button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+
+  .button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
